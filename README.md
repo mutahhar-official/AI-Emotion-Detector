@@ -1,4 +1,4 @@
-# Final project
+# AI Emotion Detector
 
 ## About the Project
 
@@ -39,13 +39,12 @@ This project was completed as part of the IBM course **"Build AI Applications wi
 **Build AI Applications with Python and Flask**  
 **Provider:** IBM
 
-## Participant
-
-**Name:** Alex Hales
-
 ## Credits & Attribution
 
-This repository was originally forked from the IBM Developer Skills Network project repository. The required modifications, implementation, testing, error handling, Flask deployment, and other project work were completed by **Alex Hales** as part of the IBM course.
-
+This repository was originally forked from the IBM Developer Skills Network project repository. The required modifications, implementation other project work were completed as part of the course.
 Original repository:  
 https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai
+
+## Participant
+
+**Name:** Muhammad Mutahhar Khan
