@@ -1,3 +1,4 @@
+_This repository was originally forked from the IBM Developer Skills Network project repository. The required modifications, implementation other project work were completed as part of the course._
 # AI Emotion Detector
 
 ## About the Project
@@ -41,7 +42,7 @@ This project was completed as part of the IBM course **"Build AI Applications wi
 
 ## Credits & Attribution
 
-This repository was originally forked from the IBM Developer Skills Network project repository. The required modifications, implementation other project work were completed as part of the course.
+
 Original repository:  
 https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai
 
