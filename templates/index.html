@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>AI Emotion Detector</title>
 
     <link rel="stylesheet"
@@ -15,9 +14,8 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-
             <a class="navbar-brand" href="/">
-                <span class="brand-icon">AE</span>
+                <!-- <span class="brand-icon">AE</span> -->
                 AI Emotion Detector
             </a>
 
@@ -28,136 +26,76 @@
         </div>
     </nav>
 
-
     <!-- Main -->
     <main class="main-container">
-
         <!-- Hero -->
         <section class="hero-section">
-
-            <div class="badge-pill">
-                <span class="pulse-dot"></span>
-                AI Emotion Detection
-            </div>
-
             <h1>AI Emotion Detector</h1>
-
             <p class="hero-description">
                 Enter a sentence or customer feedback and let AI
-                identify the emotions expressed in the text.
+                identify the emotions expressed.
             </p>
-
 
             <!-- Input + Result -->
             <div class="workspace">
-
                 <!-- Input Card -->
                 <div class="analysis-card">
-
                     <div class="card-header-custom">
-
                         <div>
                             <h2>Analyze your text</h2>
-
                             <p>
                                 Enter a statement and discover its emotion.
                             </p>
                         </div>
-
-                        <div class="text-icon">
-                            ✎
-                        </div>
-
                     </div>
 
-
-                    <label
-                        for="textToAnalyze"
-                        class="input-label">
-
-                        Your statement
-
-                    </label>
-
-
+                    <label for="textToAnalyze" class="input-label"> Your statement </label>
                     <textarea
                         id="textToAnalyze"
                         class="emotion-input"
                         placeholder="Example: I am really excited about this project..."
                         rows="6"></textarea>
-
-
+                    
                     <div class="input-footer">
-
                         <span id="characterCount">
                             0 characters
                         </span>
 
                         <button
                             onclick="RunSentimentAnalysis()"
-                            class="analyze-btn">
-
-                            Analyze Emotion
+                            class="analyze-btn"> Analyze Emotion
                             <span class="arrow">→</span>
-
                         </button>
-
                     </div>
-
                 </div>
-
 
                 <!-- Result Card -->
                 <div class="result-section">
-
                     <div class="result-heading">
-
-                        <div class="result-icon">
-                            ◎
-                        </div>
-
                         <div>
                             <h2>Emotion Analysis</h2>
-
                             <p>
                                 AI-generated analysis of your statement
                             </p>
                         </div>
-
                     </div>
-
-
+                    
                     <div
                         id="system_response"
                         class="system-response">
 
                         <div class="empty-result">
-
-                            <div class="empty-icon">
-                                ◎
-                            </div>
-
-                            <h3>
-                                Your result will appear here
-                            </h3>
-
+                            <div class="empty-icon"> ◎ </div>
+                            <h3> Your result will appear here </h3>
                             <p>
-                                Enter some text on the left and click
-                                <strong>Analyze Emotion</strong>.
+                                Enter some input text and click <strong>Analyze Emotion</strong>.
                             </p>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
-
 
     <!-- Footer -->
     <footer>
@@ -166,8 +104,7 @@
         </p>
     </footer>
 
-
-    <!-- Existing JavaScript -->
+    <!-- JavaScript -->
     <script src="{{ url_for('static', filename='mywebscript.js') }}"></script>
 
 </body>
