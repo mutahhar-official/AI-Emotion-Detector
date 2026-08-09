@@ -23,32 +23,14 @@ def emotion_detector_route():
         return "Invalid text! Please try again!"
 
     return (
-    "<div class='emotion-result'>"
-    "<h3>Emotion Scores</h3>"
-
-    f"<div class='emotion-row'><span>Anger</span>"
-    f"<span>{response['anger']:.4f}</span></div>"
-
-    f"<div class='emotion-row'><span>Disgust</span>"
-    f"<span>{response['disgust']:.4f}</span></div>"
-
-    f"<div class='emotion-row'><span>Fear</span>"
-    f"<span>{response['fear']:.4f}</span></div>"
-
-    f"<div class='emotion-row'><span>Joy</span>"
-    f"<span>{response['joy']:.4f}</span></div>"
-
-    f"<div class='emotion-row'><span>Sadness</span>"
-    f"<span>{response['sadness']:.4f}</span></div>"
-
-    f"<div class='dominant-emotion'>"
-    f"Dominant emotion: "
-    f"<strong>{response['dominant_emotion'].upper()}</strong>"
-    "</div>"
-
-    "</div>"
+    "Emotion Scores<br><br>"
+    f"Anger = {response['anger']}<br>"
+    f"Disgust = {response['disgust']}<br>"
+    f"Fear = {response['fear']}<br>"
+    f"Joy = {response['joy']}<br>"
+    f"Sadness = {response['sadness']}<br><br>"
+    f"<strong>Dominant emotion: {response['dominant_emotion'].upper()}</strong>"
 )
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
