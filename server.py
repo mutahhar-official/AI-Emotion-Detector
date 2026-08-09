@@ -23,14 +23,31 @@ def emotion_detector_route():
         return "Invalid text! Please try again!"
 
     return (
-        "For the given statement, the system response is "
-        f"'anger': {response['anger']}, "
-        f"'disgust': {response['disgust']}, "
-        f"'fear': {response['fear']}, "
-        f"'joy': {response['joy']} and "
-        f"'sadness': {response['sadness']}. "
-        f"The dominant emotion is {response['dominant_emotion']}."
-    )
+    "<div class='emotion-result'>"
+    "<h3>Emotion Scores</h3>"
+
+    f"<div class='emotion-row'><span>Anger</span>"
+    f"<span>{response['anger']:.4f}</span></div>"
+
+    f"<div class='emotion-row'><span>Disgust</span>"
+    f"<span>{response['disgust']:.4f}</span></div>"
+
+    f"<div class='emotion-row'><span>Fear</span>"
+    f"<span>{response['fear']:.4f}</span></div>"
+
+    f"<div class='emotion-row'><span>Joy</span>"
+    f"<span>{response['joy']:.4f}</span></div>"
+
+    f"<div class='emotion-row'><span>Sadness</span>"
+    f"<span>{response['sadness']:.4f}</span></div>"
+
+    f"<div class='dominant-emotion'>"
+    f"Dominant emotion: "
+    f"<strong>{response['dominant_emotion'].upper()}</strong>"
+    "</div>"
+
+    "</div>"
+)
 
 
 if __name__ == "__main__":
