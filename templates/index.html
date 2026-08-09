@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,137 +17,95 @@
     <nav class="navbar">
         <div class="nav-container">
 
-            <a class="navbar-brand" href="/">
-                <span class="brand-icon">AE</span>
-                AI Emotion Detector
+            <a href="/" class="brand">
+                <span class="brand-icon">✦</span>
+                <span>AI Emotion Detector</span>
             </a>
 
-            <span class="nav-label">
-                Watson NLP Powered
+            <span class="powered-by">
+                Watson NLP
             </span>
 
         </div>
     </nav>
 
 
-    <!-- Main -->
-    <main class="main-container">
+    <!-- Main Content -->
+    <main class="container">
 
-        <!-- Hero -->
-        <section class="hero-section">
-
-            <div class="badge-pill">
-                <span class="pulse-dot"></span>
-                AI Emotion Detection
-            </div>
+        <!-- Introduction -->
+        <section class="intro">
 
             <h1>AI Emotion Detector</h1>
 
-            <p class="hero-description">
-                Enter a sentence or customer feedback and let AI
-                identify the emotions expressed in the text.
+            <p>
+                Enter a sentence and let the application analyze
+                the emotions expressed in your text.
             </p>
 
-
-            <!-- Input + Result -->
-            <div class="workspace">
-
-                <!-- Input Card -->
-                <div class="analysis-card">
-
-                    <div class="card-header-custom">
-
-                        <div>
-                            <h2>Analyze your text</h2>
-
-                            <p>
-                                Enter a statement and discover its emotion.
-                            </p>
-                        </div>
-
-                        <div class="text-icon">
-                            ✎
-                        </div>
-
-                    </div>
+        </section>
 
 
-                    <label
-                        for="textToAnalyze"
-                        class="input-label">
+        <!-- Input and Result -->
+        <section class="workspace">
 
-                        Your statement
+            <!-- Input Card -->
+            <div class="card">
 
-                    </label>
+                <h2>Analyze Text</h2>
 
+                <p class="card-description">
+                    Enter a statement below to detect its emotions.
+                </p>
 
-                    <textarea
-                        id="textToAnalyze"
-                        class="emotion-input"
-                        placeholder="Example: I am really excited about this project..."
-                        rows="6"></textarea>
+                <label for="textToAnalyze">
+                    Your statement
+                </label>
 
+                <textarea
+                    id="textToAnalyze"
+                    placeholder="Example: I am very happy with my new project..."
+                    rows="7"></textarea>
 
-                    <div class="input-footer">
+                <div class="card-bottom">
 
-                        <span id="characterCount">
-                            0 characters
-                        </span>
+                    <span id="characterCount">
+                        0 characters
+                    </span>
 
-                        <button
-                            onclick="RunSentimentAnalysis()"
-                            class="analyze-btn">
-
-                            Analyze Emotion
-                            <span class="arrow">→</span>
-
-                        </button>
-
-                    </div>
+                    <button
+                        onclick="RunSentimentAnalysis()"
+                        class="analyze-btn">
+                        Analyze Emotion
+                    </button>
 
                 </div>
 
+            </div>
 
-                <!-- Result Card -->
-                <div class="result-section">
 
-                    <div class="result-heading">
+            <!-- Result Card -->
+            <div class="card result-card">
 
-                        <div class="result-icon">
-                            ◎
+                <h2>Emotion Detection Result</h2>
+
+                <p class="card-description">
+                    The analysis of your statement will appear here.
+                </p>
+
+                <div id="system_response" class="result-box">
+
+                    <div class="result-placeholder">
+
+                        <div class="placeholder-icon">
+                            —
                         </div>
 
-                        <div>
-                            <h2>Emotion Analysis</h2>
-
-                            <p>
-                                AI-generated analysis of your statement
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        id="system_response"
-                        class="system-response">
-
-                        <div class="empty-result">
-
-                            <div class="empty-icon">
-                                ◎
-                            </div>
-
-                            <h3>
-                                Your result will appear here
-                            </h3>
-
-                            <p>
-                                Enter some text on the left and click
-                                <strong>Analyze Emotion</strong>.
-                            </p>
-
-                        </div>
+                        <p>
+                            Enter a statement and click
+                            <strong>Analyze Emotion</strong>
+                            to see the result.
+                        </p>
 
                     </div>
 
@@ -162,7 +121,7 @@
     <!-- Footer -->
     <footer>
         <p>
-            AI Emotion Detector · Built with Python, Flask & Watson NLP
+            AI Emotion Detector · Python · Flask · Watson NLP
         </p>
     </footer>
 
@@ -171,4 +130,5 @@
     <script src="{{ url_for('static', filename='mywebscript.js') }}"></script>
 
 </body>
+
 </html>
