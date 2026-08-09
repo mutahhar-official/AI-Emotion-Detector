@@ -26,12 +26,12 @@ body {
 
 .navbar {
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid #e7e7ed;
 }
 
 .nav-container {
-    width: min(100% - 50px, 1050px);
+    width: min(100% - 50px, 1100px);
     min-height: 70px;
     margin: auto;
 
@@ -45,11 +45,11 @@ body {
     align-items: center;
 
     color: #171827;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 800;
 
     text-decoration: none;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.3px;
 }
 
 .brand-icon {
@@ -67,12 +67,14 @@ body {
     background: #171827;
     color: white;
 
-    font-size: 1.1rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .nav-label {
     color: #777989;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 500;
 }
 
@@ -82,7 +84,7 @@ body {
 ========================================= */
 
 .main-container {
-    width: min(100% - 40px, 950px);
+    width: min(100% - 40px, 1100px);
     margin: auto;
 
     padding: 45px 0 25px;
@@ -96,9 +98,6 @@ body {
 .hero-section {
     text-align: center;
 }
-
-
-/* Small badge */
 
 .badge-pill {
     display: inline-flex;
@@ -134,9 +133,6 @@ body {
         0 0 0 4px rgba(108, 99, 255, 0.12);
 }
 
-
-/* Main heading */
-
 .hero-section h1 {
     max-width: 800px;
 
@@ -152,9 +148,6 @@ body {
     letter-spacing: -4px;
 }
 
-
-/* Description */
-
 .hero-description {
     max-width: 600px;
 
@@ -168,13 +161,33 @@ body {
 
 
 /* =========================================
-   ANALYSIS CARD
+   INPUT + RESULT WORKSPACE
+========================================= */
+
+.workspace {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    text-align: left;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   INPUT CARD
 ========================================= */
 
 .analysis-card {
     width: 100%;
 
-    text-align: left;
+    display: flex;
+    flex-direction: column;
 
     background: white;
 
@@ -182,27 +195,24 @@ body {
 
     border-radius: 22px;
 
-    padding: 28px;
+    padding: 26px;
 
     box-shadow:
         0 20px 60px rgba(25, 25, 45, 0.07);
 }
-
-
-/* Card heading */
 
 .card-header-custom {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .card-header-custom h2 {
     color: #171827;
 
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 750;
 
     margin-bottom: 5px;
@@ -211,11 +221,8 @@ body {
 .card-header-custom p {
     color: #858694;
 
-    font-size: 0.84rem;
+    font-size: 0.82rem;
 }
-
-
-/* Pencil icon */
 
 .text-icon {
     width: 42px;
@@ -230,11 +237,8 @@ body {
     background: #f0efff;
     color: #6c63ff;
 
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 }
-
-
-/* Input label */
 
 .input-label {
     display: block;
@@ -247,13 +251,10 @@ body {
     margin-bottom: 8px;
 }
 
-
-/* Text area */
-
 .emotion-input {
     width: 100%;
 
-    min-height: 105px;
+    min-height: 135px;
 
     resize: vertical;
 
@@ -268,7 +269,7 @@ body {
     color: #222331;
 
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
 
     transition:
@@ -290,30 +291,25 @@ body {
         0 0 0 4px rgba(108, 99, 255, 0.1);
 }
 
-
-/* Input footer */
-
 .input-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin-top: 13px;
+    margin-top: auto;
+    padding-top: 15px;
 }
 
 #characterCount {
     color: #9899a5;
 
-    font-size: 0.78rem;
+    font-size: 0.76rem;
 }
-
-
-/* Analyze button */
 
 .analyze-btn {
     border: none;
 
-    padding: 12px 18px;
+    padding: 12px 17px;
 
     border-radius: 11px;
 
@@ -322,7 +318,7 @@ body {
 
     font-family: inherit;
 
-    font-size: 0.86rem;
+    font-size: 0.84rem;
     font-weight: 700;
 
     cursor: pointer;
@@ -350,13 +346,11 @@ body {
 
 
 /* =========================================
-   RESULT SECTION
+   RESULT CARD
 ========================================= */
 
 .result-section {
     width: 100%;
-
-    margin-top: 18px;
 
     background: white;
 
@@ -364,16 +358,13 @@ body {
 
     border-radius: 22px;
 
-    padding: 25px;
+    padding: 26px;
 
     text-align: left;
 
     box-shadow:
-        0 15px 45px rgba(25, 25, 45, 0.05);
+        0 20px 60px rgba(25, 25, 45, 0.07);
 }
-
-
-/* Result heading */
 
 .result-heading {
     display: flex;
@@ -412,7 +403,7 @@ body {
 .result-heading p {
     color: #858694;
 
-    font-size: 0.8rem;
+    font-size: 0.78rem;
 }
 
 
@@ -420,10 +411,25 @@ body {
    EMPTY RESULT
 ========================================= */
 
+.system-response {
+    color: #50515f;
+
+    font-size: 0.88rem;
+
+    line-height: 1.75;
+}
+
 .empty-result {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
 
-    padding: 28px 20px;
+    padding: 25px 18px;
 
     border-radius: 15px;
 
@@ -443,34 +449,19 @@ body {
 .empty-result h3 {
     color: #30313e;
 
-    font-size: 0.95rem;
+    font-size: 0.93rem;
 
     margin-bottom: 6px;
 }
 
 .empty-result p {
+    max-width: 280px;
+
     color: #898a97;
 
-    font-size: 0.82rem;
+    font-size: 0.8rem;
 
     line-height: 1.5;
-}
-
-
-/* =========================================
-   ACTUAL SERVER RESPONSE
-========================================= */
-
-.system-response {
-    color: #50515f;
-
-    font-size: 0.9rem;
-
-    line-height: 1.75;
-}
-
-.system-response strong {
-    color: #171827;
 }
 
 
@@ -485,18 +476,18 @@ footer {
 
     color: #999aa7;
 
-    font-size: 0.75rem;
+    font-size: 0.74rem;
 }
 
 
 /* =========================================
-   RESPONSIVE DESIGN
+   MOBILE
 ========================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
 
     .nav-container {
-        width: min(100% - 25px, 950px);
+        width: min(100% - 25px, 1100px);
     }
 
     .nav-label {
@@ -504,7 +495,7 @@ footer {
     }
 
     .main-container {
-        width: min(100% - 24px, 950px);
+        width: min(100% - 24px, 1100px);
 
         padding-top: 35px;
     }
@@ -519,11 +510,25 @@ footer {
         margin-bottom: 25px;
     }
 
+
+    /* Stack input and result on mobile */
+
+    .workspace {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
     .analysis-card,
     .result-section {
         padding: 20px;
 
         border-radius: 18px;
+    }
+
+    .emotion-input {
+        min-height: 120px;
     }
 
     .input-footer {
@@ -536,7 +541,50 @@ footer {
         padding: 11px 14px;
     }
 
-    .result-section {
-        margin-top: 15px;
+    .empty-result {
+        min-height: 150px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 450px) {
+
+    .navbar-brand {
+        font-size: 0.98rem;
+    }
+
+    .brand-icon {
+        width: 33px;
+        height: 33px;
+
+        margin-right: 8px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.6rem;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .input-footer {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .analyze-btn {
+        width: 100%;
+    }
+
+    #characterCount {
+        text-align: left;
     }
 }
